@@ -1,0 +1,95 @@
+/* General Page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #0044cc;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+nav ul {
+  display: none;
+  flex-direction: column;
+  background-color: #0044cc;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  text-align: center;
+}
+
+nav ul.active {
+  display: flex;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.temple-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.temple-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.temple-gallery figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #0044cc;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px;
+}

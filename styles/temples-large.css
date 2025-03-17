@@ -1,0 +1,29 @@
+@media screen and (min-width: 768px) {
+    /* Navigation */
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: static;
+        background: none;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 0 15px;
+    }
+
+    /* Temple Gallery */
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
