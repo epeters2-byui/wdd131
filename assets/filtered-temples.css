@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Code's body and header */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4B0082;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Temple Gallery */
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Temple Gallery */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.temple-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.temple-card h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.temple-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #4B0082;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer img.rose-icon {
+    width: 15px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+/* Hamburger Menu (Responsive) */
+.hamburger {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .temple-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .temple-gallery {
+        grid-template-columns: 1fr;
+    }
+}

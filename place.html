@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Liberia</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Visit My Amazing Liberia
+            <img src="images/flag.jpg" alt="Liberia Flag" class="liberia-flag">
+        </h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: px)" srcset="images/hero-small.webp">
+                <img src="images/hippo_liberia_1.jpg" alt="Hippo" class="hero-image">
+            </picture>
+        </div>
+
+        <section class="data-section">
+            <div class="section-heading">Data</div>
+            <div class="section-content">
+                <p>Location: Monrovia</p>
+                <p>Population: 5.6 Million</p>
+                <p>Language: English</p>
+                <p>Biodiversity: Home to the Upper Guinea Forest</p>
+                
+            </div>
+        </section>
+
+        <section class="weather-section">
+            <div class="section-heading">Weather</div>
+            <div class="section-content">
+                <p>Temperature: 30°C</p>
+                <p>Wind Speed: 10 km/h</p>
+                <p id="windChill">Wind Chill: N/A</p>
+                <p id="weather-icon">⛅</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> 
+            <img src="images/rose.png" alt="Rose" class="rose-icon">
+            Emmanuel M. Peters 
+            <img src="images/rose.png" alt="Rose" class="rose-icon">
+            Liberia
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
