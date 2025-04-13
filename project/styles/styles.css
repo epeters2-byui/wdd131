@@ -328,7 +328,7 @@ main section img {
    height: 20px;
 } 
 .msg {
-   background-color: #fcfbfb;                             
+   background-color: black;                             
    line-height: 1.5em;
    padding: 25px;
    float: right;

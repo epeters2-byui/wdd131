@@ -1,4 +1,4 @@
-// Function to calculate the wind chill factor
+// Function for calculating the wind chill factor
 function calculateWindChill(temperature, windSpeed) {
     if ((temperature <= 10 && windSpeed > 4.8)) {
         return Math.round(

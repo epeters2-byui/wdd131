@@ -70,12 +70,10 @@ main {
     grid-area: data;
     text-align: left;
 }
-
 .weather-section {
     grid-area: weather;
     text-align: right;
 }
-
 .data-section .section-heading, 
 .weather-section .section-heading {
     background-color: lightgreen;
@@ -129,9 +127,9 @@ footer .rose-icon {
     padding: 5px;
     text-align: right;
     border-radius: 5px;
-    display: flex; /* Make heading a flex container */
-    justify-content: space-between; /* Spread out text and icon */
-    align-items: center; /* Vertically align the text and icon */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
 }
 
 /* Weather Icon */
@@ -139,14 +137,23 @@ footer .rose-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px; /* Add some space between text and icon */
+    margin-left: 10px; 
 }
 
 .weather-icon img {
     width: 40px;
     height: 40px;
 }
-
+/* Display Wind Chill */
+#windChill {
+    font-weight: bold;
+  }
+  
+  /* Large View Weather Icon After Heading */
+  .weather-section .section-heading::after {
+    content: " ⛅";
+    margin-left: 5px;
+  }
 
 /* Media Query for Mobile View */
 @media only screen and (max-width: 768px) {
@@ -173,3 +180,6 @@ footer .rose-icon {
         height: 25px;
     }
 }
+
+
+
