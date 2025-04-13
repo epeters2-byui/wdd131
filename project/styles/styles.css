@@ -328,7 +328,11 @@ main section img {
    height: 20px;
 } 
 .msg {
+<<<<<<< HEAD
    background-color: black;                             
+=======
+   background-color:black;                             
+>>>>>>> 3d7a75858b7523ba6ba4dbc8c34e198d4c5e318f
    line-height: 1.5em;
    padding: 25px;
    float: right;
