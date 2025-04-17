@@ -1,185 +1,147 @@
-/* Global Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
-header {
-    background-color: red;
-    color: white;
+    background-color: #f9f9f9;
+    color: #111;
+  }
+  
+  header {
+    background-color: #a00000;
+    color: #fff;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-.liberia-flag {
+  }
+  
+  .liberia-flag {
     width: 50px;
-    height: 30px;
-    margin-right: 10px;
+    height: auto;
     position: absolute;
     left: 20px;
-    top: 15px;
-}
-
-header h1 {
+    top: 20px;
+  }
+  
+  h1 {
     margin: 0;
     text-align: center;
-}
-
-/* Main Layout */
-main {
+  }
+  
+  /* Pseudo-element Emoticon */
+  header h1::after {
+    content: " 🌍";
+    font-size: 1.2em;
+    margin-left: 8px;
+  }
+  
+  /* Layout */
+  main {
     display: grid;
-    grid-template-areas: 
-        "data hero weather";
+    grid-template-areas:
+      "data hero weather";
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     padding: 20px;
-    align-items: start;
-}
-
-/* Hero Image */
-.hero {
+  }
+  
+  .hero {
     grid-area: hero;
-    text-align: center;
-    width: 100%;
-}
-
-.hero-image {
+  }
+  
+  .hero-image {
     width: 100%;
     max-height: 600px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Data and Weather Sections */
-.data-section, .weather-section {
-    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Sections */
+  .data-section, .weather-section {
+    background-color: #fff;
     border: 2px solid green;
     border-radius: 5px;
     padding: 10px;
     width: 90%;
     min-height: 150px;
-}
-
-.data-section {
+  }
+  
+  .data-section {
     grid-area: data;
     text-align: left;
-}
-.weather-section {
+  }
+  
+  .weather-section {
     grid-area: weather;
     text-align: right;
-}
-.data-section .section-heading, 
-.weather-section .section-heading {
-    background-color: lightgreen;
-    color: white;
-    padding: 5px;
-    text-align: right;
+  }
+  
+  .section-heading {
+    background-color: #006400;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background-color: red;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Pseudo-element emoji before heading */
+  .weather-section .section-heading::before {
+    content: "⛅ ";
+    font-size: 1.2em;
+    margin-right: 8px;
+  }
+  
+  /* SVG Icon */
+  .section-heading svg.weather-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    fill: yellow;
+  }
+  
+  /* Wind Chill Style */
+  #windChill {
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #a00000;
+    color: #fff;
     text-align: center;
     padding: 10px;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer .rose-icon {
+  }
+  
+  footer .rose-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
     margin: 0 5px;
-}
-/* Data and Weather Sections */
-.data-section, .weather-section {
-    background-color: white;
-    border: 2px solid green;
-    border-radius: 5px;
-    padding: 10px;
-    width: 90%;
-    min-height: 150px;
-}
-
-.data-section {
-    grid-area: data;
-    text-align: left;
-}
-
-.weather-section {
-    grid-area: weather;
-    text-align: right;
-}
-
-.data-section .section-heading, 
-.weather-section .section-heading {
-    background-color: lightgreen;
-    color: white;
-    padding: 5px;
-    text-align: right;
-    border-radius: 5px;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center; 
-}
-
-/* Weather Icon */
-.weather-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px; 
-}
-
-.weather-icon img {
-    width: 40px;
-    height: 40px;
-}
-/* Display Wind Chill */
-#windChill {
-    font-weight: bold;
   }
   
-  /* Large View Weather Icon After Heading */
-  .weather-section .section-heading::after {
-    content: " ⛅";
-    margin-left: 5px;
-  }
-
-/* Media Query for Mobile View */
-@media only screen and (max-width: 768px) {
+  /* Responsive */
+  @media only screen and (max-width: 768px) {
     main {
-        grid-template-areas: 
-            "hero"
-            "data"
-            "weather";
-        grid-template-columns: 1fr;
+      grid-template-areas:
+        "hero"
+        "data"
+        "weather";
+      grid-template-columns: 1fr;
     }
-
-    .hero-image {
-        width: 100%;
-    }
-
+  
     .data-section, .weather-section {
-        width: 80%;
+      width: 100%;
     }
-
+  
     .liberia-flag {
-        left: 10px;
-        top: 10px;
-        width: 40px;
-        height: 25px;
+      width: 40px;
+      top: 10px;
+      left: 10px;
     }
-}
-
-
-
+  }
+  

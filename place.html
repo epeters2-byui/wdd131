@@ -1,51 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Emmanuel M. Peters">
+  <meta name="author" content="Emmanuel M. Peters">
   <title>Explore Liberia</title>
   <link rel="stylesheet" href="styles/place.css" />
   <script defer src="scripts/place.js"></script>
 </head>
 <body>
   <header>
-    <h1>
-      Visit My Amazing Liberia
-      <img src="images/flag.jpg" alt="Liberia Flag" class="liberia-flag" />
-    </h1>
+    <img src="images/flag.jpg" alt="Liberia Flag" class="liberia-flag" />
+    <h1>Republic of Liberia</h1>
   </header>
 
   <main>
     <div class="hero">
       <picture>
-        <source media="(max-width: 600px)" srcset="images/hero-small.webp" type="image/webp" />
-        <img src="images/hero-large.webp" alt="Hippo in Liberia" class="hero-image" type="image/webp" />
+        <source srcset="images/hero-small.webp" media="(max-width: 600px)" type="image/webp">
+        <source srcset="images/hero-large.webp" media="(min-width: 601px)" type="image/webp">
+        <img src="images/hero-large.jpg" alt="Pygmy Hippo in Liberia" class="hero-image" loading="lazy">
       </picture>
     </div>
 
     <section class="data-section">
-      <div class="section-heading">Data</div>
+      <div class="section-heading">📊 Data</div>
       <div class="section-content">
         <p><strong>Location:</strong> Monrovia</p>
         <p><strong>Population:</strong> 5.6 Million</p>
         <p><strong>Language:</strong> English</p>
-        <p><strong>Biodiversity:</strong> Home to the Upper Guinea Forest</p>
-        <p><strong>Major Park:</strong> Sarpo National Park, Sinoe County</p>
+        <p><strong>Biodiversity:</strong> Upper Guinea Forest</p>
+        <p><strong>Major Park:</strong> Sarpo National Park</p>
         <p><strong>Well-known Animal:</strong> Pygmy Hippo</p>
       </div>
     </section>
 
     <section class="weather-section">
       <div class="section-heading">
-        Weather <span class="weather-icon-mobile">
-    
-        </span>
+        <span>🌦 Weather</span>
+        <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="12" fill="#FFD93D"/>
+          <path d="M20,45c0-5,4-9,9-9s9,4,9,9" stroke="#5B8C5A" stroke-width="2" fill="none"/>
+        </svg>
       </div>
       <div class="section-content">
         <p><strong>Condition:</strong> Partly Cloudy</p>
-        <p><strong>Temperature:</strong> <span id="temperature">30</span>°C</p>
-        <p><strong>Wind Speed:</strong> <span id="windspeed">10</span> km/h</p>
-        <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+        <p><strong>Temperature:</strong> <span id="temperature">5</span>°C</p>
+        <p><strong>Wind Speed:</strong> <span id="windspeed">8</span> km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="windChill">Calculating...</span></p>
       </div>
     </section>
   </main>
@@ -63,5 +66,3 @@
   </footer>
 </body>
 </html>
-
-
