@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 12px; 
+    margin-bottom: 20px;
+    width: 650px; 
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 auto; 
+}
+
+header h1 {
+    padding: 20px; 
+    border-radius: 5px;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+main {
+    background-color: #D2B48C;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+fieldset#featuresFieldset {
+    display: block;
+    padding: 10px;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.rose-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header, footer {
+        width: 100%;
+        padding: 10px;
+    }
+
+    main {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    label, input[type="text"], input[type="date"], textarea, select, input[type="submit"] {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 8px;
+        text-align: left;
+    }
+
+    main {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    label, input[type="text"], input[type="date"], textarea, select, input[type="submit"] {
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

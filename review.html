@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <h2>Review Confirmation</h2>
+        <p>Thank you for your review!</p>
+        <p>Your review has been successfully submitted.</p>
+
+        <button onclick="window.location.href='form.html'">Submit Another Review</button>
+
+        <!-- Total Submitted Display here -->
+        <p id="reviewCount"></p>
+    </main>
+
+    <footer>
+        <footer>
+            <p>
+                &copy; <span id="currentyear"></span> 
+                <img src="images/rose.png" alt="Rose" class="rose-icon">
+                Emmanuel M. Peters 
+                <img src="images/rose.png" alt="Rose" class="rose-icon">
+                Liberia
+            </p>
+            <p id="lastModified"></p>
+    </footer>
+    <!-- Add JavaScript directly to the review.html -->
+    <script>
+        // Load Page
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Get to localStorage
+            const reviewCount = localStorage.getItem("reviewCount") || 0;
+
+            // The count of reviews submitted display here
+            const reviewCountElement = document.getElementById("reviewCount");
+            if (reviewCountElement) {
+                reviewCountElement.textContent = `Total Reviews Submitted: ${reviewCount}`;
+            }
+
+            // The last modified date
+            const lastModifiedDate = document.lastModified;
+            const lastModifiedElement = document.getElementById("lastModified");
+            if (lastModifiedElement) {
+                lastModifiedElement.textContent = `Last Modified: ${lastModifiedDate}`;
+            }
+        });
+    </script>
+</body>
+</html>
